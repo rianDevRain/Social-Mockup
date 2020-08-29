@@ -1,5 +1,9 @@
 # Social-Mockup
- Style a Social Network Page
+### Style a Social Network Page
+Website created using Sass for Css. In using Sass I was able to nest selectors in the .scss file which aided in creating the CSS. 
+
+Note: Comments for the CSS are in the 
+
 
 ## Create a header using what you have learned about the box model and how to position elements using CSS. 
 
@@ -17,4 +21,5 @@
 ## Mock up Goal to match:
 <a href="https://imgur.com/PKAE7L2"><img src="https://i.imgur.com/PKAE7L2.png" title="source: imgur.com" /></a>
 
-
+## Top Half Finished:
+<a href="https://imgur.com/Lh6WAyJ"><img src="https://i.imgur.com/Lh6WAyJ.png" title="source: imgur.com" /></a>

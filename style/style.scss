@@ -4,6 +4,7 @@ $p-color: #5566a8;
 $s-color: #f5f5f5;
 $border: black solid 3px;
 // reset and borderbox
+// No support for IE8 or earlier using ::before and ::after
 *,
 *::before,
 *::after {
@@ -23,7 +24,8 @@ html {
   margin-top: 10px;
   margin-bottom: 0;
   background-color: $p-color;
-  // profile picture
+  // profile picture using random photo from Unsplash
+  // Every reload will load a new picture
   .picture {
     height: 200px;
     width: 200px;
@@ -32,7 +34,7 @@ html {
     position: relative;
     left: 12px;
     top: 125px;
-    box-shadow: 10px 5px 5px 5px, -10px -5px -5px -5px;
+    box-shadow: 1px 1px 3px, -1px -1px 3px;
   }
   // makes each section relative for positioning
   .title,
@@ -40,55 +42,84 @@ html {
   .likerow,
   .timerow {
     position: relative;
-    border: red solid 5px;
   }
   // Profile name
   .title {
-    top: -67px;
-    left: 212px;
+    top: 21px;
+    left: 219px;
     color: $s-color;
     font-size: 1.75rem;
     font-weight: 600;
   }
   // profile site
   .site {
-    top: -61px;
-    left: 212px;
+    top: 23px;
+    left: 219px;
     color: $s-color;
     font-size: 1.2rem;
   }
   // all buttons
   .bttn {
     border: white dotted 3px;
-    background-color: blue;
+    background-color: white;
     width: 100px;
     cursor: pointer;
   }
   // row of buttons with like button
   .likerow {
-    top: -46px;
-    left: 423px;
+    .bttn {
+      height: 30px;
+      border-radius: 2px;
+    }
+    top: -8px;
+    left: 427px;
+    .b2,
+    .b3 {
+      border-right: rgba(0, 0, 0, 0.2) solid 1px;
+    }
     .likebuttons {
       display: inline-flex;
       top: 30px;
       left: 30px;
-      border: $border;
-      .bttn {
-        height: 30px;
-        border-radius: 5px;
+
+      .b1 {
+        margin-right: 8px;
       }
     }
   }
   // row of buttons with timeline button
   .timerow {
-    top: -29px;
-    left: 196px;
+    top: 2px;
+    left: -6px;
+    z-index: -1;
     .timebuttons {
       display: inline-flex;
-      border: $border;
+
       .bttn {
         height: 60px;
       }
     }
+  }
+  .timerow::before {
+    content: " \00a0";
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    left: 6px;
+    top: -18px;
+    z-index: -1;
+    height: 60px;
+    width: 200px;
+  }
+  .timerow::after {
+    content: " \00a0";
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    right: -691px;
+    top: -78px;
+    z-index: 999;
+    height: 60px;
+    width: 165px;
   }
 }
