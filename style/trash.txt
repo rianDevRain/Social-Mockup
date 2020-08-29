@@ -1,0 +1,39 @@
+Deleted to find bug. Saved to reference later.
+.likebuttons {
+    top: 1px;
+    left: 200px;
+    display: inline-flex;
+    top: -22px;
+    left: 404px;
+    border: black 5px solid;
+  }
+  .bttn {
+    width: 100px;
+    border-radius: 0.1rem;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .b1-a,
+  .b1-b,
+  .b1-c,
+  .b1-d {
+    height: 1.75rem;
+    
+    border: none;
+  }
+  .b1-b,
+  .b1-c {
+    margin-right: 3px;
+  }
+  .b1-a {
+    margin-right: 8px;
+  }
+  .timebuttons {
+    left: 1;
+    top: 2;
+    display: inline-flex;
+    background-color: white;
+    height: 50px;
+   
+    border: black solid 4px;
+  }

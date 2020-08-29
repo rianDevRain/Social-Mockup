@@ -1,0 +1,94 @@
+/** @format */
+// Sass variables
+$p-color: #5566a8;
+$s-color: #f5f5f5;
+$border: black solid 3px;
+// reset and borderbox
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background-color: #e9eaed;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+// Top Section
+.hero {
+  width: 850px;
+  height: 300px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 0;
+  background-color: $p-color;
+  // profile picture
+  .picture {
+    height: 200px;
+    width: 200px;
+    background: url(https://source.unsplash.com/random/300×300) no-repeat
+      center/cover;
+    position: relative;
+    left: 12px;
+    top: 125px;
+    box-shadow: 10px 5px 5px 5px, -10px -5px -5px -5px;
+  }
+  // makes each section relative for positioning
+  .title,
+  .site,
+  .likerow,
+  .timerow {
+    position: relative;
+    border: red solid 5px;
+  }
+  // Profile name
+  .title {
+    top: -67px;
+    left: 212px;
+    color: $s-color;
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+  // profile site
+  .site {
+    top: -61px;
+    left: 212px;
+    color: $s-color;
+    font-size: 1.2rem;
+  }
+  // all buttons
+  .bttn {
+    border: white dotted 3px;
+    background-color: blue;
+    width: 100px;
+    cursor: pointer;
+  }
+  // row of buttons with like button
+  .likerow {
+    top: -46px;
+    left: 423px;
+    .likebuttons {
+      display: inline-flex;
+      top: 30px;
+      left: 30px;
+      border: $border;
+      .bttn {
+        height: 30px;
+        border-radius: 5px;
+      }
+    }
+  }
+  // row of buttons with timeline button
+  .timerow {
+    top: -29px;
+    left: 196px;
+    .timebuttons {
+      display: inline-flex;
+      border: $border;
+      .bttn {
+        height: 60px;
+      }
+    }
+  }
+}

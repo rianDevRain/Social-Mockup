@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/** @format */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  background-color: #e9eaed;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero {
+  width: 850px;
+  height: 300px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 0;
+  background-color: #5566a8;
+}
+
+.hero .picture {
+  height: 200px;
+  width: 200px;
+  background: url(https://source.unsplash.com/random/300×300) no-repeat center/cover;
+  position: relative;
+  left: 12px;
+  top: 125px;
+  -webkit-box-shadow: 10px 5px 5px 5px, -10px -5px -5px -5px;
+          box-shadow: 10px 5px 5px 5px, -10px -5px -5px -5px;
+}
+
+.hero .title,
+.hero .site,
+.hero .likerow,
+.hero .timerow {
+  position: relative;
+  border: red solid 5px;
+}
+
+.hero .title {
+  top: -67px;
+  left: 212px;
+  color: #f5f5f5;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.hero .site {
+  top: -61px;
+  left: 212px;
+  color: #f5f5f5;
+  font-size: 1.2rem;
+}
+
+.hero .bttn {
+  border: white dotted 3px;
+  background-color: blue;
+  width: 100px;
+  cursor: pointer;
+}
+
+.hero .likerow {
+  top: -46px;
+  left: 423px;
+}
+
+.hero .likerow .likebuttons {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  top: 30px;
+  left: 30px;
+  border: black solid 3px;
+}
+
+.hero .likerow .likebuttons .bttn {
+  height: 30px;
+  border-radius: 5px;
+}
+
+.hero .timerow {
+  top: -29px;
+  left: 196px;
+}
+
+.hero .timerow .timebuttons {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border: black solid 3px;
+}
+
+.hero .timerow .timebuttons .bttn {
+  height: 60px;
+}
+/*# sourceMappingURL=style.css.map */
