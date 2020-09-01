@@ -5,8 +5,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -30,8 +29,7 @@ html {
   position: relative;
   left: 12px;
   top: 125px;
-  -webkit-box-shadow: 1px 1px 3px, -1px -1px 3px;
-          box-shadow: 1px 1px 3px, -1px -1px 3px;
+  box-shadow: 1px 1px 3px, -1px -1px 3px;
 }
 
 .hero .title,
@@ -79,8 +77,6 @@ html {
 }
 
 .hero .likerow .likebuttons {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   top: 30px;
   left: 30px;
@@ -97,8 +93,6 @@ html {
 }
 
 .hero .timerow .timebuttons {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
@@ -128,5 +122,146 @@ html {
   z-index: 999;
   height: 60px;
   width: 165px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 328px 512px;
+  grid-template-rows: repeat(5, 100px);
+  margin-top: 5rem;
+  justify-content: center;
+  gap: 10px;
+}
+
+.container .gridi {
+  background-color: white;
+}
+
+.container .item1 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: 10px 100px 1fr;
+  gap: 2px;
+  color: blue;
+}
+
+.container .item1 .gridi2 {
+  background: url(https://source.unsplash.com/random/300×300) no-repeat center/cover;
+  grid-column: 2 / 3;
+  grid-row: 1 / 6;
+}
+
+.container .item1 .gridi3 {
+  align-self: center;
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+  font-size: .75rem;
+}
+
+.container .item1 .gridi4 {
+  grid-column: 3 / 4;
+  grid-row: 6 / 8;
+  color: black;
+  background-color: white;
+  text-align: center;
+  align-self: center;
+}
+
+.container .item1 .gridi5 {
+  grid-column: 3 / 4;
+  grid-row: 8 / 9;
+  padding: 0;
+  font-size: .75rem;
+}
+
+.container .item1 .gridi7 {
+  grid-column: 2 / 3;
+  grid-row: 6 /7;
+}
+
+.container .item1 .gridi8 {
+  grid-column: 3 / 4;
+  grid-row: 6 /7;
+}
+
+.container .item2 {
+  display: grid;
+  grid-template-columns: repeat(3, 108px);
+  grid-template-rows: repeat(3, 108px);
+  gap: 1px;
+  grid-row: 1 / 5;
+}
+
+.container .item2 .items1 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  background: url(https://source.unsplash.com/random/100×100) no-repeat center/cover;
+}
+
+.container .item2 .items2 {
+  background: url(https://source.unsplash.com/random/103×100) no-repeat center/cover;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.container .item2 .items3 {
+  background: url(https://source.unsplash.com/random/302×300) no-repeat center/cover;
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.container .item2 .items4 {
+  background: url(https://source.unsplash.com/random/105×100) no-repeat center/cover;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.container .item2 .items5 {
+  background: url(https://source.unsplash.com/random/100×101) no-repeat center/cover;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.container .item2 .items6 {
+  background: url(https://source.unsplash.com/random/100×102) no-repeat center/cover;
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+
+.container .item2 .items7 {
+  background: url(https://source.unsplash.com/random/100×103) no-repeat center/cover;
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+}
+
+.container .item2 .items8 {
+  background: url(https://source.unsplash.com/random/100×104) no-repeat center/cover;
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+}
+
+.container .item2 .items9 {
+  background: url(https://source.unsplash.com/random/100×105) no-repeat center/cover;
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+}
+
+.container .item2 .item10 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+  color: blue;
+}
+
+.container .item3 {
+  grid-row: 4 / 5;
+  grid-column: 1 / 2;
+}
+
+.container .item4 {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
 }
 /*# sourceMappingURL=style.css.map */

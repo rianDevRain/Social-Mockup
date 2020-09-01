@@ -1,8 +1,10 @@
 # Social-Mockup
 ### Style a Social Network Page
-Website created using Sass for Css. In using Sass I was able to nest selectors in the .scss file which aided in creating the CSS. 
+Learning Sassy Sass using nested selectors and variables.
+Comments can be found in the .scss file.
+ 
 
-Note: Comments for the CSS are in the 
+
 
 
 ## Create a header using what you have learned about the box model and how to position elements using CSS. 
