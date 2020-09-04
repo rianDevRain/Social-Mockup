@@ -2,104 +2,94 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/style.css" />
-    <script
-      src="https://kit.fontawesome.com/109916713c.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Social-Mockup</title>
-  </head>
-  <body>
-    <!-- Top Section -->
-    <div class="page-container">
-      <header class="hero">
-        <!-- Profile Picture -->
-        <div class="picture"></div>
-        <!-- Profile title and website -->
-        <div class="title">Social Site</div>
-        <div class="site">www.placeholder.com</div>
-        <!-- row with like button for positioning -->
-        <div class="likerow">
-          <!-- Another row for flexbox -->
-          <div class="likebuttons">
-            <button class="b1 bttn">
-              <i class="fas fa-thumbs-up"></i>
-              like
-            </button>
-            <button class="b2 bttn">
-              <i class="fas fa-plus"></i>
-              follow
-            </button>
-            <button class="b3 bttn">
-              <i class="fas fa-comment-alt"></i>
-              message
-            </button>
-            <button class="b4 bttn">
-              <i class="fas fa-ellipsis-h"></i>
-            </button>
-          </div>
-        </div>
-        <!-- row with timeline for postioning -->
-        <div class="timerow">
-          <!-- row with timeline for flexbox -->
-          <div class="timebuttons">
-            <button class="b2-a bttn">Timeline</button>
-            <button class="b2-b bttn">About</button>
-            <button class="b2-c bttn">Welcome</button>
-            <button class="b2-d bttn">BLM</button>
-            <button class="b2-e bttn">
-              More
-              <i class="fas fa-caret-down"></i>
-            </button>
-          </div>
-        </div>
-      </header>
-      <!-- Bottom section -->
-      <div class="maincontainer">
-        <div class="container">
-          <div class="item1 gridi">
-            <div class="gridi1"></div>
-            <div class="gridi2"></div>
-            <div class="gridi3">
-              <b> Your Name:</b> updated their status <br />time and date
-            </div>
-            <div class="gridi4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-              suscipit, porro consequuntur nobis iure atque sit Provident
-              perspiciatis necessitatibus cumque.
-            </div>
-            <div class="gridi5">Like Comment Share</div>
-          </div>
-          <div class="item2 gridi">
-            <div class="items1 grids2"></div>
-            <div class="items2 grids2"></div>
-            <div class="items3 grids2"></div>
-            <div class="items4 grids2"></div>
-            <div class="items5 grids2"></div>
-            <div class="items6 grids2"></div>
-            <div class="items7 grids2"></div>
-            <div class="items8 grids2"></div>
-            <div class="items9 grids2"></div>
-            <div class="item10 grids2">Photos</div>
-            <div class="item11 grids2">&gt;</div>
-          </div>
-
-          <div class="item3 gridi">
-            <div class="gridi1"></div>
-            <div class="gridi2"></div>
-            <div class="gridi3">
-              <b> Your Name:</b> Uploaded a photo <br />time and date
-            </div>
-
-            <div class="gridi4"></div>
-            <div class="gridi5">Like Comment Share</div>
-          </div>
-        </div>
-      </div>
-      <footer id="footer">rianDevRain &copy; 2020</footer>
-    </div>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./style/style.css" />
+		<script src="https://kit.fontawesome.com/109916713c.js" crossorigin="anonymous"></script>
+		<title>Social-Mockup</title>
+	</head>
+	<body>
+		<!-- Top Section -->
+		<div class="page-wrapper">
+			<header class="header">
+				<!-- Profile Picture -->
+				<div class="header__img"></div>
+				<!-- Profile title and website -->
+				<div class="header__title">Social Site</div>
+				<div class="header__site">www.placeholder.com</div>
+				<!-- row with like button for positioning -->
+				<div class="button-wrapper">
+					<!-- Another row for flexbox -->
+					<div class="buttons">
+						<button class="buttons__bttn-1 buttons__bttn">
+							<i class="fas fa-thumbs-up"></i>
+							like
+						</button>
+						<button class="buttons__bttn-2 buttons__bttn">
+							<i class="fas fa-plus"></i>
+							follow
+						</button>
+						<button class="buttons__bttn-3 buttons__bttn">
+							<i class="fas fa-comment-alt"></i>
+							message
+						</button>
+						<button class="buttons__bttn-4 buttons__bttn">
+							<i class="fas fa-ellipsis-h"></i>
+						</button>
+					</div>
+				</div>
+				<!-- row with timeline for postioning -->
+				<div class="nav-wrapper">
+					<!-- row with timeline for flexbox -->
+					<nav class="nav">
+						<button class="nav__bttn-1 nav__bttn">Timeline</button>
+						<button class="nav__bttn-2 nav__bttn">About</button>
+						<button class="nav__bttn-3 nav__bttn">Welcome</button>
+						<button class="nav__bttn-4 nav__bttn">BLM</button>
+						<button class="nav__bttn-5 nav__bttn">
+							More
+							<i class="fas fa-caret-down"></i>
+						</button>
+					</nav>
+				</div>
+			</header>
+			<!-- Bottom section -->
+			<div class="main-wrapper">
+				<div class="main">
+					<section class="post-txt post">
+						<div class="post-txt__empty"></div>
+						<div class="post-txt__img"></div>
+						<div class="post-txt__info"><b> Your Name:</b> updated their status <br />time and date</div>
+						<div class="post-txt__post">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit suscipit, porro consequuntur nobis iure
+							atque sit Provident perspiciatis necessitatibus cumque.
+						</div>
+						<div class="post-txt__bttns">Like Comment Share</div>
+					</section>
+					<aside class="aside">
+						<div class="aside__img-1 aside__img"></div>
+						<div class="aside__img-2 aside__img"></div>
+						<div class="aside__img-3 aside__img"></div>
+						<div class="aside__img-4 aside__img"></div>
+						<div class="aside__img-5 aside__img"></div>
+						<div class="aside__img-6 aside__img"></div>
+						<div class="aside__img-7 aside__img"></div>
+						<div class="aside__img-8 aside__img"></div>
+						<div class="aside__img-9 aside__img"></div>
+						<div class="aside__txt-1 aside__txt">Photos</div>
+						<div class="aside__txt-2 aside__txt">&gt;</div>
+					</aside>
+					<section class="post-img post">
+						<div class="post-img__empty"></div>
+						<div class="post-img__img"></div>
+						<div class="post-img__info"><b> Your Name:</b> Uploaded a photo <br />time and date</div>
+						<div class="post-img__post"></div>
+						<div class="post-img__bttns">Like Comment Share</div>
+					</section>
+				</div>
+			</div>
+			<footer class="footer">rianDotDev &copy; 2020</footer>
+		</div>
+	</body>
 </html>

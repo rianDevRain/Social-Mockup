@@ -2,326 +2,325 @@
 // Sass variables
 $p-color: #5566a8;
 $s-color: #f5f5f5;
+$card-color: #f6f7f8;
 $border: black solid 3px;
 // reset and borderbox
 // No support for IE8 or earlier using ::before and ::after
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 html {
-  background-color: #e9eaed;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background-color: #e9eaed;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.page-container {
-  // min-height: 100vh;
-  position: relative;
-  margin-top: 20px;
-  margin: auto;
-  width: 850px;
-  // top: 20px;
-  .title,
-  .site,
-  .likerow,
-  .timerow,
-  .maincontainer,
-  .hero {
-    position: absolute;
-  }
-  // Top Section
-  .hero {
-    width: 850px;
-    height: 300px;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 0;
-    background-color: $p-color;
-    height: 264px;
-    top: -9px;
-    
-    // padding-bottom: 2.5rem;
-    // profile picture using random photo from Unsplash
-    // Every reload will load a new picture
-    .picture {
-      height: 186px;
-      width: 186px;
-      background: url(https://source.unsplash.com/random/300×300) no-repeat center/cover;
-      position: absolute;
-      left: 20px;
-      top: 107px;
-      box-shadow: 1px 1px 3px, -1px -1px 3px;
-    }
-    // makes each section relative for positioning
+// page-wrapper wraps around all of the code so that I can position
+.page-wrapper {
+	position: relative;
+	margin-top: 20px;
+	margin: auto;
+	width: 850px;
+	min-height: 100vh;
+	top: 20px;
+	// makes each section absolute for positioning based on the page-wrapper
+	// since page-wrapper is set to relative then everything else is positioned
+	// based on the position of the page-wrapper.
+	.header__title,
+	.header__site,
+	.button-wrapper,
+	.nav-wrapper,
+	.main-wrapper,
+	.header {
+		position: absolute;
+	}
+	// Top Section
+	.header {
+		width: 850px;
+		height: 300px;
+		margin: auto;
+		margin-top: 10px;
+		margin-bottom: 0;
+		background-color: $p-color;
+		height: 264px;
+		top: -9px;
+		// profile picture using random photo from Unsplash
+		// Every reload will load a new picture
+		&__img {
+			height: 186px;
+			width: 186px;
+			background: url(https://source.unsplash.com/random/300×300) no-repeat center/cover;
+			position: absolute;
+			left: 20px;
+			top: 107px;
+			box-shadow: 1px 1px 3px, -1px -1px 3px;
+		}
+		// Profile name
+		&__title {
+			top: 144px;
+			left: 231px;
+			color: $s-color;
+			font-size: 1.65rem;
+			font-weight: 600;
+		}
+		// profile site
+		&__site {
+			top: 175px;
+			left: 231px;
+			color: $s-color;
+			font-size: 1.2rem;
+		}
+		// Wrapper for likebuttons positioning absolute to parent
+		.button-wrapper {
+			top: 221px;
+			left: 430px;
+		}
+		// Previously named likebuttons
+		.buttons {
+			display: inline-flex;
+			top: 30px;
+			left: 30px;
 
-    // Profile name
-    .title {
-      top: 144px;
-      left: 231px;
-      color: $s-color;
-      font-size: 1.75rem;
-      font-weight: 600;
-    }
-    // profile site
-    .site {
-      top: 175px;
-      left: 231px;
-      color: $s-color;
-      font-size: 1.2rem;
-    }
-    // all buttons
-    .bttn {
-      border: white dotted 3px;
-      background-color: white;
-      width: 100px;
-      cursor: pointer;
-    }
-    // row of buttons with like button
-    .likerow {
-      top: 221px;
-      left: 430px;
-    }
-    .bttn {
-      height: 30px;
-      border-radius: 2px;
-    }
-    .b2,
-    .b3 {
-      border-right: rgba(0, 0, 0, 0.2) solid 1px;
-    }
-    .likebuttons {
-      display: inline-flex;
-      top: 30px;
-      left: 30px;
+			&__bttn {
+				border: white dotted 3px;
+				background-color: white;
+				width: 100px;
+				cursor: pointer;
+				height: 30px;
+				border-radius: 2px;
+			}
+			&__bttn-2,
+			&__bttn-3 {
+				border-right: rgba(0, 0, 0, 0.4) solid 1px;
+			}
+			&__bttn-1 {
+				margin-right: 8px;
+			}
+		}
+		// wrapper for positioning .nav absolute to parent
+		.nav-wrapper {
+			top: 252px;
+			left: 200px;
+			z-index: -1;
+			&__bttn-2,
+			&__bttn-3 {
+				border-right: rgba(0, 0, 0, 0.2) solid 1px;
+			}
+		}
+		// previously name timebuttons
+		.nav {
+			display: inline-flex;
+			&__bttn {
+				background-color: white;
+				width: 100px;
+				height: 60px;
+				cursor: pointer;
+				border: white dotted 3px;
+			}
+			&__bttn-1,
+			&__bttn-2,
+			&__bttn-3,
+			&__bttn-4 {
+				border-right: rgba(0, 0, 0, 0.2) solid 1px;
+			}
+		}
+		.nav::before {
+			content: " \00a0";
+			display: inline-block;
+			background-color: white;
+			position: absolute;
+			left: -200px;
+			top: 0px;
+			z-index: -1;
+			height: 60px;
+			width: 200px;
+		}
+		.nav::after {
+			content: " \00a0";
+			display: inline-block;
+			background-color: white;
+			position: absolute;
+			right: -150px;
+			top: 0px;
+			z-index: 999;
+			height: 60px;
+			width: 165px;
+		}
+	}
+	// container for positioning
+	.main-wrapper {
+		left: 0px;
+		top: 332px;
+		color: blue;
+		// container for grid
+	}
+	.main {
+		display: grid;
+		grid-template-columns: 328px 512px;
+		grid-template-rows: 10px repeat(7, 100px);
+		justify-content: center;
+		gap: 10px;
 
-      .b1 {
-        margin-right: 8px;
-      }
-    }
-    // row of buttons with timeline button
-    .timerow {
-      top: 252px;
-      left: 200px;
-      z-index: -1;
-      .timebuttons {
-        display: inline-flex;
-        .bttn {
-          height: 60px;
-        }
-      }
-    }
-    .timerow::before {
-      content: " \00a0";
-      display: inline-block;
-      background-color: white;
-      position: absolute;
-      left: -200px;
-      top: 0px;
-      z-index: -1;
-      height: 60px;
-      width: 200px;
-    }
-    .timerow::after {
-      content: " \00a0";
-      display: inline-block;
-      background-color: white;
-      position: absolute;
-      right: -150px;
-      top: 0px;
-      z-index: 999;
-      height: 60px;
-      width: 165px;
-    }
-  }
-  // container for positioning
-  .maincontainer {
-    left: 0px;
-    top: 332px;
-    color: blue;
-    // container for grid
-    .container {
-      display: grid;
-      grid-template-columns: 328px 512px;
-      grid-template-rows: 10px repeat(7, 100px);
-      justify-content: center;
-      gap: 10px;
-      .gridi {
-        background-color: #f6f7f8;
-      }
-      .item1:hover {
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-      }
-      .item2:hover {
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-      }
-      .item3:hover {
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-      }
-      // grid for text post
-      .item1 {
-        grid-column: 2 / 3;
-        grid-row: 1 / 4;
-        display: grid;
-        grid-template-columns: 10px 75px 1fr;
-        grid-template-rows: 10px 75px 8px 2fr 1fr;
-        gap: 2px;
-        color: blue;
-        background-color: #f6f7f8;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-        .gridi2 {
-          background: url(https://source.unsplash.com/random/300×300) no-repeat center/cover;
-          grid-column: 2 / 3;
-          grid-row: 2 / 3;
-          height: 75px;
-        }
-        .gridi3 {
-          align-self: center;
-          grid-row: 2 / 3;
-          grid-column: 3 / 4;
-          font-size: 0.75rem;
-        }
-        .gridi4 {
-          grid-column: 2 / 4;
-          grid-row: 4 / 5;
-          color: black;
-          align-self: center;
-          background: rgb(131, 58, 180);
-          background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
-          height: 100px;
-          color: black;
-          font-size: 0.8rem;
-        }
-        .gridi5 {
-          grid-column: 2 / 4;
-          grid-row: 5 / 6;
-          font-size: 0.75rem;
-        }
-      }
-      // Photos grid
-      .item2 {
-        display: grid;
-        grid-template-columns: repeat(3, 105px);
-        grid-template-rows: 20px repeat(3, 1fr);
-        gap: 1px;
-        grid-row: 1 / 5;
-        background-color: #f6f7f8;
-        color: black;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-        
-        .items1 {
-          grid-column: 1 / 2;
-          grid-row: 2 / 3;
-          background: url(https://source.unsplash.com/random/100×100) no-repeat center/cover;
-        }
-        .items2 {
-          background: url(https://source.unsplash.com/random/103×100) no-repeat center/cover;
-          grid-column: 2 / 3;
-          grid-row: 2 / 3;
-        }
-        .items3 {
-          background: url(https://source.unsplash.com/random/302×300) no-repeat center/cover;
-          grid-column: 3 / 4;
-          grid-row: 2 / 3;
-        }
-        .items4 {
-          background: url(https://source.unsplash.com/random/105×100) no-repeat center/cover;
-          grid-column: 1 / 2;
-          grid-row: 3 / 4;
-        }
-        .items5 {
-          background: url(https://source.unsplash.com/random/100×101) no-repeat center/cover;
-          grid-column: 2 / 3;
-          grid-row: 3 / 4;
-        }
-        .items6 {
-          background: url(https://source.unsplash.com/random/100×102) no-repeat center/cover;
-          grid-column: 3 / 4;
-          grid-row: 3 / 4;
-        }
-        .items7 {
-          background: url(https://source.unsplash.com/random/100×103) no-repeat center/cover;
-          grid-column: 1 / 2;
-          grid-row: 4 / 5;
-        }
-        .items8 {
-          background: url(https://source.unsplash.com/random/100×104) no-repeat center/cover;
-          grid-column: 2 / 3;
-          grid-row: 4 / 5;
-        }
-        .items9 {
-          background: url(https://source.unsplash.com/random/100×105) no-repeat center/cover;
-          grid-column: 3 / 4;
-          grid-row: 4 / 5;
-        }
-        .item10 {
-          grid-column: 1 / 3;
-          grid-row: 1 / 2;
-          background-color: #f6f7f8;
-          color: rgba(29, 29, 29, 0.685);
-        }
-        .item11 {
-          grid-column: 3 / 4;
-          grid-row: 1 / 2;
-          justify-self: end;
-          background-color: #f6f7f8;
-          color: rgba(29, 29, 29, 0.685);
-        }
-      }
-      .item2::after {
-        content: "dfdfdfd \00a0";
-        background-color: yellow;
-        border: $border;
-        position: relative;
-        top: 33px;
-        right: 33px;
-        z-index: 99999;
-      }
-      // picture post
-      .item3 {
-        grid-column: 2 / 3;
-        display: grid;
-        grid-template-columns: 10px 75px 1fr;
-        grid-template-rows: 10px 75px 8px 200px 20px;
-        color: blue;
-        background-color: #f6f7f8;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-        .gridi2 {
-          background: url(https://source.unsplash.com/random/300×300) no-repeat
-            center/cover;
-          grid-row: 2 / 3;
-          grid-column: 2 / 3;
-        }
-        .gridi3 {
-          align-self: center;
-          font-size: 0.75rem;
-          grid-row: 2 / 3;
-          grid-column: 3 / 4;
-        }
-        .gridi4 {
-          background: url(https://source.unsplash.com/random/103×100) no-repeat center/cover;
-          text-align: center;
-          grid-row: 4 / 5;
-          grid-column: 1 / 4;
-        }
-        .gridi5 {
-          padding: 0;
-          font-size: 0.75rem;
-          grid-row: 5 / 6;
-          grid-column: 1 / 4;
-          background-color: #f6f7f8;
-        }
-      }
-    }
-  }
-  #footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-  }
+		// card with grid for post with text
+		.post-txt {
+			grid-column: 2 / 3;
+			grid-row: 1 / 4;
+			display: grid;
+			grid-template-columns: 10px 75px 1fr;
+			grid-template-rows: 10px 75px 8px 2fr 1fr;
+			&__img {
+				background: url(https://source.unsplash.com/random/300×300) no-repeat center/cover;
+				grid-column: 2 / 3;
+				grid-row: 2 / 3;
+				height: 75px;
+			}
+			&__info {
+				align-self: center;
+				grid-row: 2 / 3;
+				grid-column: 3 / 4;
+				font-size: 0.75rem;
+			}
+			&__post {
+				grid-column: 2 / 4;
+				grid-row: 4 / 5;
+				color: black;
+				align-self: center;
+				background-color: #f6f7f8;
+				background: rgb(131, 58, 180);
+				background: linear-gradient(
+					90deg,
+					rgba(131, 58, 180, 1) 0%,
+					rgba(253, 29, 29, 1) 50%,
+					rgba(252, 176, 69, 1) 100%
+				);
+				height: 100px;
+				color: whitesmoke;
+				font-size: 1.2rem;
+			}
+			&__bttns {
+				grid-column: 2 / 4;
+				grid-row: 5 / 6;
+				font-size: 0.75rem;
+			}
+		}
+		// card for photos in a grid
+		.aside {
+			display: grid;
+			grid-template-columns: repeat(3, 108px);
+			grid-template-rows: 20px repeat(3, 1fr);
+			grid-row: 1 / 5;
+			&__img-1 {
+				grid-column: 1 / 2;
+				grid-row: 2 / 3;
+				background: url(https://source.unsplash.com/random/100×100) no-repeat center/cover;
+			}
+			&__img-2 {
+				background: url(https://source.unsplash.com/random/103×100) no-repeat center/cover;
+				grid-column: 2 / 3;
+				grid-row: 2 / 3;
+			}
+			&__img-3 {
+				background: url(https://source.unsplash.com/random/302×300) no-repeat center/cover;
+				grid-column: 3 / 4;
+				grid-row: 2 / 3;
+			}
+			&__img-4 {
+				background: url(https://source.unsplash.com/random/105×100) no-repeat center/cover;
+				grid-column: 1 / 2;
+				grid-row: 3 / 4;
+			}
+			&__img-5 {
+				background: url(https://source.unsplash.com/random/100×101) no-repeat center/cover;
+				grid-column: 2 / 3;
+				grid-row: 3 / 4;
+			}
+			&__img-6 {
+				background: url(https://source.unsplash.com/random/100×102) no-repeat center/cover;
+				grid-column: 3 / 4;
+				grid-row: 3 / 4;
+			}
+			&__img-7 {
+				background: url(https://source.unsplash.com/random/100×103) no-repeat center/cover;
+				grid-column: 1 / 2;
+				grid-row: 4 / 5;
+			}
+			&__img-8 {
+				background: url(https://source.unsplash.com/random/100×104) no-repeat center/cover;
+				grid-column: 2 / 3;
+				grid-row: 4 / 5;
+			}
+			&__img-9 {
+				background: url(https://source.unsplash.com/random/100×105) no-repeat center/cover;
+				grid-column: 3 / 4;
+				grid-row: 4 / 5;
+			}
+			&__txt-1 {
+				grid-column: 1 / 3;
+				grid-row: 1 / 2;
+				background-color: #f6f7f8;
+				color: rgba(29, 29, 29, 0.685);
+			}
+			&__txt-2 {
+				grid-column: 3 / 4;
+				grid-row: 1 / 2;
+				justify-self: end;
+				background-color: #f6f7f8;
+				color: rgba(29, 29, 29, 0.685);
+			}
+		}
+		// card with grid with image post
+		.post-img {
+			grid-column: 2 / 3;
+			grid-row: 4 / 7;
+			display: grid;
+			grid-template-columns: 10px 75px 1fr;
+			grid-template-rows: 10px 75px 8px 200px 20px;
+			&__img {
+				background: url(https://source.unsplash.com/random/300×300) no-repeat center/cover;
+				grid-row: 2 / 3;
+				grid-column: 2 / 3;
+			}
+			&__info {
+				align-self: center;
+				font-size: 0.75rem;
+				grid-row: 2 / 3;
+				grid-column: 3 / 4;
+			}
+			&__post {
+				background: url(https://source.unsplash.com/random/103×100) no-repeat center/cover;
+				grid-row: 4 / 5;
+				grid-column: 1 / 4;
+			}
+			&__bttns {
+				padding: 0;
+				font-size: 0.75rem;
+				grid-row: 5 / 6;
+				grid-column: 2 / 4;
+				background-color: #f6f7f8;
+			}
+		}
+		.post,
+		.aside {
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+			transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+			gap: 2px;
+			background-color: $card-color;
+			color: $p-color;
+			.post:hover,
+			.aside:hover {
+				box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+			}
+		}
+	}
+	.footer {
+		content: "\00A9";
+		position: fixed;
+		bottom: 10px;
+		width: 100%;
+		height: 2.5rem;
+		z-index: 999999;
+		margin-left: 10px;
+	}
 }
