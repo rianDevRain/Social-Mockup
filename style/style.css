@@ -14,23 +14,22 @@ html {
 }
 
 .page-container {
-  min-height: 100vh;
   position: relative;
+  margin-top: 20px;
   margin: auto;
   width: 850px;
-  top: 20px;
 }
 
 .page-container .title,
 .page-container .site,
 .page-container .likerow,
 .page-container .timerow,
-.page-container .maincontainer {
+.page-container .maincontainer,
+.page-container .hero {
   position: absolute;
 }
 
 .page-container .hero {
-  position: absolute;
   width: 850px;
   height: 300px;
   margin: auto;
@@ -137,7 +136,6 @@ html {
 }
 
 .page-container .maincontainer {
-  position: absolute;
   left: 0px;
   top: 332px;
   color: blue;
@@ -155,6 +153,18 @@ html {
   background-color: #f6f7f8;
 }
 
+.page-container .maincontainer .container .item1:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.page-container .maincontainer .container .item2:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.page-container .maincontainer .container .item3:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
 .page-container .maincontainer .container .item1 {
   grid-column: 2 / 3;
   grid-row: 1 / 4;
@@ -164,6 +174,8 @@ html {
   gap: 2px;
   color: blue;
   background-color: #f6f7f8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .page-container .maincontainer .container .item1 .gridi2 {
@@ -185,9 +197,11 @@ html {
   grid-row: 4 / 5;
   color: black;
   align-self: center;
+  background: #833ab4;
+  background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
   height: 100px;
   color: black;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .page-container .maincontainer .container .item1 .gridi5 {
@@ -198,22 +212,14 @@ html {
 
 .page-container .maincontainer .container .item2 {
   display: grid;
-  grid-template-columns: repeat(3, 108px);
-  grid-template-rows: 1fr repeat(3, 108px);
+  grid-template-columns: repeat(3, 105px);
+  grid-template-rows: 20px repeat(3, 1fr);
   gap: 1px;
   grid-row: 1 / 5;
   background-color: #f6f7f8;
   color: black;
-}
-
-.page-container .maincontainer .container .item2 .item2::after {
-  content: "dfdfdfd \00a0";
-  background-color: yellow;
-  border: black solid 3px;
-  position: relative;
-  top: 33px;
-  right: 33px;
-  z-index: 99999;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .page-container .maincontainer .container .item2 .items1 {
@@ -285,14 +291,25 @@ html {
   color: rgba(29, 29, 29, 0.685);
 }
 
+.page-container .maincontainer .container .item2::after {
+  content: "dfdfdfd \00a0";
+  background-color: yellow;
+  border: black solid 3px;
+  position: relative;
+  top: 33px;
+  right: 33px;
+  z-index: 99999;
+}
+
 .page-container .maincontainer .container .item3 {
   grid-column: 2 / 3;
-  grid-row: 4 / 7;
   display: grid;
   grid-template-columns: 10px 75px 1fr;
   grid-template-rows: 10px 75px 8px 200px 20px;
   color: blue;
   background-color: #f6f7f8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .page-container .maincontainer .container .item3 .gridi2 {
@@ -319,7 +336,7 @@ html {
   padding: 0;
   font-size: 0.75rem;
   grid-row: 5 / 6;
-  grid-column: 2 / 4;
+  grid-column: 1 / 4;
   background-color: #f6f7f8;
 }
 

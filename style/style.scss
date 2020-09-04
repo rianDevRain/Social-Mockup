@@ -17,21 +17,22 @@ html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .page-container {
-  min-height: 100vh;
+  // min-height: 100vh;
   position: relative;
+  margin-top: 20px;
   margin: auto;
   width: 850px;
-  top: 20px;
+  // top: 20px;
   .title,
   .site,
   .likerow,
   .timerow,
-  .maincontainer {
+  .maincontainer,
+  .hero {
     position: absolute;
   }
   // Top Section
   .hero {
-    position: absolute;
     width: 850px;
     height: 300px;
     margin: auto;
@@ -40,14 +41,14 @@ html {
     background-color: $p-color;
     height: 264px;
     top: -9px;
+    
     // padding-bottom: 2.5rem;
     // profile picture using random photo from Unsplash
     // Every reload will load a new picture
     .picture {
       height: 186px;
       width: 186px;
-      background: url(https://source.unsplash.com/random/300×300) no-repeat
-        center/cover;
+      background: url(https://source.unsplash.com/random/300×300) no-repeat center/cover;
       position: absolute;
       left: 20px;
       top: 107px;
@@ -99,7 +100,6 @@ html {
         margin-right: 8px;
       }
     }
-
     // row of buttons with timeline button
     .timerow {
       top: 252px;
@@ -137,26 +137,27 @@ html {
   }
   // container for positioning
   .maincontainer {
-    position: absolute;
-
     left: 0px;
     top: 332px;
     color: blue;
-
     // container for grid
     .container {
-      // position: static;
       display: grid;
       grid-template-columns: 328px 512px;
-
       grid-template-rows: 10px repeat(7, 100px);
-
-      // margin-top: 5rem;
       justify-content: center;
       gap: 10px;
-
       .gridi {
         background-color: #f6f7f8;
+      }
+      .item1:hover {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      }
+      .item2:hover {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      }
+      .item3:hover {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
       }
       // grid for text post
       .item1 {
@@ -168,10 +169,10 @@ html {
         gap: 2px;
         color: blue;
         background-color: #f6f7f8;
-
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
         .gridi2 {
-          background: url(https://source.unsplash.com/random/300×300) no-repeat
-            center/cover;
+          background: url(https://source.unsplash.com/random/300×300) no-repeat center/cover;
           grid-column: 2 / 3;
           grid-row: 2 / 3;
           height: 75px;
@@ -186,16 +187,9 @@ html {
           grid-column: 2 / 4;
           grid-row: 4 / 5;
           color: black;
-          // background-color: white;
-          // text-align: ;
           align-self: center;
-          // background: rgb(131, 58, 180);
-          // background: linear-gradient(
-          //   90deg,
-          //   rgba(131, 58, 180, 1) 0%,
-          //   rgba(253, 29, 29, 1) 50%,
-          //   rgba(252, 176, 69, 1) 100%
-          // );
+          background: rgb(131, 58, 180);
+          background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
           height: 100px;
           color: black;
           font-size: 0.8rem;
@@ -203,79 +197,63 @@ html {
         .gridi5 {
           grid-column: 2 / 4;
           grid-row: 5 / 6;
-          // padding: 0;
           font-size: 0.75rem;
         }
       }
       // Photos grid
       .item2 {
         display: grid;
-        grid-template-columns: repeat(3, 108px);
-        grid-template-rows: 1fr repeat(3, 108px);
+        grid-template-columns: repeat(3, 105px);
+        grid-template-rows: 20px repeat(3, 1fr);
         gap: 1px;
         grid-row: 1 / 5;
         background-color: #f6f7f8;
         color: black;
-        .item2::after {
-          content: "dfdfdfd \00a0";
-          background-color: yellow;
-          border: $border;
-          position: relative;
-          top: 33px;
-          right: 33px;
-          z-index: 99999;
-        }
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        
         .items1 {
           grid-column: 1 / 2;
           grid-row: 2 / 3;
-          background: url(https://source.unsplash.com/random/100×100) no-repeat
-            center/cover;
+          background: url(https://source.unsplash.com/random/100×100) no-repeat center/cover;
         }
         .items2 {
-          background: url(https://source.unsplash.com/random/103×100) no-repeat
-            center/cover;
+          background: url(https://source.unsplash.com/random/103×100) no-repeat center/cover;
           grid-column: 2 / 3;
           grid-row: 2 / 3;
         }
         .items3 {
-          background: url(https://source.unsplash.com/random/302×300) no-repeat
-            center/cover;
+          background: url(https://source.unsplash.com/random/302×300) no-repeat center/cover;
           grid-column: 3 / 4;
           grid-row: 2 / 3;
         }
         .items4 {
-          background: url(https://source.unsplash.com/random/105×100) no-repeat
-            center/cover;
+          background: url(https://source.unsplash.com/random/105×100) no-repeat center/cover;
           grid-column: 1 / 2;
           grid-row: 3 / 4;
         }
         .items5 {
-          background: url(https://source.unsplash.com/random/100×101) no-repeat
-            center/cover;
+          background: url(https://source.unsplash.com/random/100×101) no-repeat center/cover;
           grid-column: 2 / 3;
           grid-row: 3 / 4;
         }
         .items6 {
-          background: url(https://source.unsplash.com/random/100×102) no-repeat
-            center/cover;
+          background: url(https://source.unsplash.com/random/100×102) no-repeat center/cover;
           grid-column: 3 / 4;
           grid-row: 3 / 4;
         }
         .items7 {
-          background: url(https://source.unsplash.com/random/100×103) no-repeat
-            center/cover;
+          background: url(https://source.unsplash.com/random/100×103) no-repeat center/cover;
           grid-column: 1 / 2;
           grid-row: 4 / 5;
         }
         .items8 {
-          background: url(https://source.unsplash.com/random/100×104) no-repeat
-            center/cover;
+          background: url(https://source.unsplash.com/random/100×104) no-repeat center/cover;
           grid-column: 2 / 3;
           grid-row: 4 / 5;
         }
         .items9 {
-          background: url(https://source.unsplash.com/random/100×105) no-repeat
-            center/cover;
+          background: url(https://source.unsplash.com/random/100×105) no-repeat center/cover;
           grid-column: 3 / 4;
           grid-row: 4 / 5;
         }
@@ -293,17 +271,25 @@ html {
           color: rgba(29, 29, 29, 0.685);
         }
       }
+      .item2::after {
+        content: "dfdfdfd \00a0";
+        background-color: yellow;
+        border: $border;
+        position: relative;
+        top: 33px;
+        right: 33px;
+        z-index: 99999;
+      }
       // picture post
       .item3 {
         grid-column: 2 / 3;
-        grid-row: 4 / 7;
-
         display: grid;
         grid-template-columns: 10px 75px 1fr;
         grid-template-rows: 10px 75px 8px 200px 20px;
-
         color: blue;
         background-color: #f6f7f8;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
         .gridi2 {
           background: url(https://source.unsplash.com/random/300×300) no-repeat
             center/cover;
@@ -317,8 +303,7 @@ html {
           grid-column: 3 / 4;
         }
         .gridi4 {
-          background: url(https://source.unsplash.com/random/103×100) no-repeat
-            center/cover;
+          background: url(https://source.unsplash.com/random/103×100) no-repeat center/cover;
           text-align: center;
           grid-row: 4 / 5;
           grid-column: 1 / 4;
@@ -327,7 +312,7 @@ html {
           padding: 0;
           font-size: 0.75rem;
           grid-row: 5 / 6;
-          grid-column: 2 / 4;
+          grid-column: 1 / 4;
           background-color: #f6f7f8;
         }
       }
