@@ -2,12 +2,13 @@
 
 # Social-Mockup
 ### Please NOTE:
-
-#### Icons from font awesome are imported in the head of html. Because these are imported in the html head they will not be imported into codepen if one were to copy and paste there.
-<br>
-also
-
 ##### There is a .css file and a .scss file. Please use the .css file as the .scss file is used by and for Sass.
+<br>
+Update: after writing this section below I realized why my main section was not moving in sync with everything set to reletive. The last item I had before the main section was an ::after box which technically does not exist. So therefor the header would not move until the edge of the browser hit the .nav section which only goes till the more and timeline edges. I would have to have a box that is 850px be the item that comes right before the main section or do it the way I did below. 
+
+<br>
+
+#### because I couldn't find this mentioned on MDN I found it in w3 for an official source. I added the links to a couple pages where I found out how to do this also.
 
 ## Parent Relative, Children Absolute
 
@@ -22,7 +23,6 @@ From W3.org https://www.w3.org/TR/css-position-3/#abspos-layout :
 I learned while doing this assessment, that when you absolutely position a box it is absolutley positioned to its containing box. This is normally the body which is why absolutley positioned boxes normally appear stuck to the page.
 <br>
 
-### Use Case:
 
 I was having problems with setting everything to relative with `margin:auto` because when I would resize the page not everything would stay in exact relation to each other. Sometimes the bottom section would move further to the left then the top section and things just would not stay lined up.
 <br>

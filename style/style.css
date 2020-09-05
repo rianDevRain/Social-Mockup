@@ -320,15 +320,12 @@ html {
   color: #5566a8;
 }
 
-.page-wrapper .main .post .post:hover,
-.page-wrapper .main .post .aside:hover,
-.page-wrapper .main .aside .post:hover,
-.page-wrapper .main .aside .aside:hover {
+.page-wrapper .main .post:hover,
+.page-wrapper .main .aside:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .page-wrapper .footer {
-  content: "\00A9";
   position: fixed;
   bottom: 10px;
   width: 100%;
